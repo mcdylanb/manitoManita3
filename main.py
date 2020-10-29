@@ -2,26 +2,28 @@ import random
 
 masterlist = [ 'Dylan', 'Kaitlyn' , 'Moymoy', 'KOA', 'Gustav' , 'Jannin'];
 
-# prints the original list
-for x in range(len(masterlist)):
-    print (masterlist[x]);
-
-
 # copies the masterlist into a new list
 randomizedML = list(masterlist);
 
-# debugging  purposes
-print (randomizedML)
-print (masterlist)
 
 # using shuffles the randomizedML list
 random.shuffle(randomizedML);
 print("PROCESS:shuffle")
 
-# debugging  purposes
-print (randomizedML)
-print (masterlist)
+# creates a function to check wheter list a and listb the same
+def checkIfUnique(list_a ,list_b):
+    answer = False
+    for people in range(len(list_a)):
+        if (list_a[people] == list_b[people]):
+            print("similar crap at: ");
+            answer = True
+    return answer 
 
-# prints manito manita parnters
+
+#shuffles until unique
+while(checkIfUnique(masterlist, randomizedML)):
+    print("ho they same")
+    random.shuffle(randomizedML);
+        
 for people in range(len(masterlist)):
-    print(masterlist[people] + randomizedML[people])
+    print(masterlist[people] + ' -> '+ randomizedML[people])
