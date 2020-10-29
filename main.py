@@ -1,6 +1,5 @@
 import random
 
-# just realized manito manita is not exchanging gift person to person but passing it on to another person untill it returns into a circle
 masterlist = [ 'Dylan', 'Kaitlyn' , 'Moymoy', 'KOA', 'Gustav' , 'Jannin'];
 
 # prints the original list
@@ -8,23 +7,20 @@ for x in range(len(masterlist)):
     print (masterlist[x]);
 
 
+# copies the masterlist into a new list
 randomizedML = list(masterlist);
 
+# debugging  purposes
 print (randomizedML)
 print (masterlist)
-# using random.shuffle
+
+# using shuffles the randomizedML list
 random.shuffle(randomizedML);
 print("PROCESS:shuffle")
 
-# prints the randomized list
-for x in range(len(randomizedML)):
-    print (randomizedML[x]);
-
+# debugging  purposes
 print (randomizedML)
 print (masterlist)
-
-
-
 
 # prints manito manita parnters
 for people in range(len(masterlist)):
